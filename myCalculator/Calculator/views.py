@@ -8,5 +8,5 @@ def calculate_interest(request):
         rate = float(request.POST['rate'])
         compound_interest = principal * (pow((1 + rate / 100), time))
         context = {'compound_interest': round(compound_interest, 2)}
-        return render(request, 'result.html', context)
-    return render(request, 'index.html')
+        return render(request, 'finalresult.html', context)
+    return render(request, 'file.html')
